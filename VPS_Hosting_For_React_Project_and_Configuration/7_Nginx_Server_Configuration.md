@@ -104,3 +104,35 @@ server {
    1. rmove the localhost URL with `https://Your_Backend_api_Full_name` 
    2. save the file and rebuild the frontend file
    3. restart the server
+
+- **Note** :- some time even after correct configuration project does not reflect on domain so we need to add ssl certificate. after adding this the project satart to render on the domain
+
+   
+# SSL Setup
+- We are going to use Let’s Encrypt SSL certificate using certbot. To install certbot:
+
+### install python 
+```py
+sudo apt-get install certbot python3-certbot-nginx
+
+####  To install certificate to your domain you can use this command:
+
+sudo certbot --nginx -d mywebsite.com (add this if you have created subdomain :- `-d www.mywebsite.com`)
+
+- you can also use "sudo certbot --nginx -d mywebsite.com" but since we have "www"
+- too we are passing another argument with another website.
+- When you do it for first time, it will ask for email, enter any email.
+- Then it will tell to agree to conditions or whatever, choose "Y"
+- At last, it will tell if you want to share your email, choose "n"
+
+-  Now, let's do for our api one
+
+sudo certbot --nginx -d api.mywebsite.com -d www.api.mywebsite.com
+
+
+- add the subdomain or domain to which you want to add ssl certificate
+- SSL is successfully installed on your website
+### **Note** :- After installing ssl on your api, you would need to change api url from client/frontend because we had used “http” at that time. So, go to your
+            client/frontend, update your API URL with https and build the project.
+
+```
