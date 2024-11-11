@@ -16,6 +16,7 @@
 - add the following code to the file
 ```bash
 
+- visit the frontend build folder and and type `pwd` to know the present directory and copy the full path
 
 server {
     listen 80;
@@ -53,6 +54,8 @@ sudo systemctl restart nginx  - to restart the server
 - add the following code to the file
 ```bash
 
+- visit the frontend build folder and and type `pwd` to know the present directory and copy the full path
+
 server {
     listen 80;
     server_name Your_Domain_Full_name wwww.Your_Domain_Full_name;
@@ -73,6 +76,8 @@ server {
 
 - add the following code to the file
 ```bash
+
+- visit the frontend build folder and and type `pwd` to know the present directory and copy the full path
 
 server {
         listen 80;
