@@ -97,6 +97,6 @@ server {
 
 - **Note**: Make sure to replace `Your_Domain_Full_name` and `Your_Backend` 
 - **Note** :- again visit Frontend folder and edit the fllowing in .env file
-            - rmove the localhost URL with `https://Your_Backend_api_Full_name` 
-            - save the file and rebuild the frontend file
-            - restart the server
+            1. rmove the localhost URL with `https://Your_Backend_api_Full_name` 
+            2. save the file and rebuild the frontend file
+            3. restart the server
