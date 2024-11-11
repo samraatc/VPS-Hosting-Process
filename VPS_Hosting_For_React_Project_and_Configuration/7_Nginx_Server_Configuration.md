@@ -14,9 +14,10 @@
 `nano Your_IP_address.conf`
 
 - add the following code to the file
+-  visit the frontend build folder and and type `pwd` to know the present directory and copy the full path
 ```bash
 
-- visit the frontend build folder and and type `pwd` to know the present directory and copy the full path
+
 
 server {
     listen 80;
@@ -27,12 +28,15 @@ server {
         try_files $uri $uri // index.html;
     }
 }
+```
 
+```save
+- save and exit nano
 
-- save and exit nano 
-ctrl + O             - to save the configuration 
+ctrl + O             # to save the configuration 
 enter 
-ctrl + X             - to exit nano .env 
+ctrl + X             # to exit nano .env
+
 
 - open the file in the `/etc/nginx/sites-enable/` folder
 - enable the symbolic linke for `/etc/nginx/sites-available/`  use the below code
@@ -52,9 +56,9 @@ sudo systemctl restart nginx  - to restart the server
 `nano Your_Domain_Full_name.conf`
 
 - add the following code to the file
+- visit the frontend build folder and and type `pwd` to know the present directory and copy the full path
 ```bash
 
-- visit the frontend build folder and and type `pwd` to know the present directory and copy the full path
 
 server {
     listen 80;
@@ -66,8 +70,11 @@ server {
     }
 }
 
-- flow the above steps to save and enable the symbolic link and restart the server
+
 ```
+- flow the above steps to save and enable the symbolic link and restart the server
+
+  
 
 
 ### For **Backend configuration**
@@ -83,7 +90,7 @@ server {
 	server_name Your_Backend_api_Full_name www.Your_Backend_api_Full_name;
 
         location / {
-                proxy_pass http://localhost:5003;          - # ( replace the 5003 port to your backend port )
+                proxy_pass http://localhost:5003;           # ( replace the 5003 port to your backend port )
                 proxy_http_version 1.1;
                 proxy_set_header Upgrade $http_upgrade;
                 proxy_set_header Connection 'upgrade';
@@ -92,11 +99,9 @@ server {
         }
 }
 
-
-
-
-- flow the above steps to save and enable the symbolic link and restart the server
 ```
+- flow the above steps to save and enable the symbolic link and restart the server
+
 
 
 - **Note**: Make sure to replace `Your_Domain_Full_name` and `Your_Backend` 
