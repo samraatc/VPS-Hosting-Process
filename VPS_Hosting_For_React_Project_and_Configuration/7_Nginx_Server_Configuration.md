@@ -77,7 +77,6 @@ server {
 - add the following code to the file
 ```bash
 
-- visit the frontend build folder and and type `pwd` to know the present directory and copy the full path
 
 server {
         listen 80;
