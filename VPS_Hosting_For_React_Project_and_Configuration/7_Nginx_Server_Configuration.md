@@ -117,7 +117,7 @@ sudo apt-get install certbot python3-certbot-nginx
 
 ####  To install certificate to your domain you can use this command:
 
-sudo certbot --nginx -d mywebsite.com (add this if you have created subdomain :- `-d www.mywebsite.com`)
+sudo certbot --nginx -d mywebsite.com -d www.mywebsite.com (add this if you have created subdomain www :- `-d www.mywebsite.com`)
 
 - you can also use "sudo certbot --nginx -d mywebsite.com" but since we have "www"
 - too we are passing another argument with another website.
@@ -132,7 +132,6 @@ sudo certbot --nginx -d api.mywebsite.com -d www.api.mywebsite.com
 
 - add the subdomain or domain to which you want to add ssl certificate
 - SSL is successfully installed on your website
-### **Note** :- After installing ssl on your api, you would need to change api url from client/frontend because we had used “http” at that time. So, go to your
-            client/frontend, update your API URL with https and build the project.
+### **Note** :- After installing ssl on your api, you would need to change api url from client/frontend because we had used “http” at that time. So, go to your client/frontend, update your API URL with https and build the project.
 
 ```
