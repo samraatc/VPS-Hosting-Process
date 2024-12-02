@@ -33,9 +33,9 @@ server {
 
 > - save and exit nano
 
-> ctrl + O             # to save the configuration 
-> enter 
-> ctrl + X             # to exit nano .env
+> - ctrl + O             # to save the configuration 
+> - enter 
+> - ctrl + X             # to exit nano .env
 > 
 > 
 > - open the file in the `/etc/nginx/sites-enable/` folder
