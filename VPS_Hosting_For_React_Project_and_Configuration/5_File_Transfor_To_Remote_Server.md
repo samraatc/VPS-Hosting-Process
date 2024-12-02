@@ -24,10 +24,14 @@ sudo apt install gh
 ```
 
 - **flow the ungoing process for login authorization with github**
-```cd gh auth login ```   
+```cd 
+gh auth login 
+```   
 
 - ** clone the repository**
-```cd git clone `url`  ``` 
+```cd 
+git clone `url`
+  ``` 
 
 
 

@@ -14,7 +14,9 @@
 - Replace username with your VPS `username` (typically/defealt user is =  root) and `your_vps_ip` with the actual IP address of your server.
 - you will be loginged into your server
 - if unable to connect than run this command 
-- ```cd ssh-keygen -R YOUR_VPS_IP_ADDRESS ```
+```cd 
+ssh-keygen -R YOUR_VPS_IP_ADDRESS
+ ```
 - it will delete your .ssh_key from your local machine from .ssh folder
 
 
@@ -46,18 +48,30 @@ pm2 --version
 
 
 > - 1. **install NVM** :
-```cd  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash  ```
+```cd 
+ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash 
+ 
+  ```
 
- ```cd nvm -V  ```
+ ```cd 
+ nvm -V 
+  ```
 >> - if it will not show the version than restart the server
 
-> - 2. **install Node** :-  nvm install --lts
- ```cd node --version  ```
+> - 2. **install Node** :
+```cd
+ nvm install --lts
+node --version 
+```
 
 > - 3. **install mongoDB for linux** :-
- ```cd  curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \ --dearmor  ```
+ ```cd  
+ curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \ --dearmor
+   ```
 
- ```cd  echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list ```
+ ```cd 
+  echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list 
+  ```
 
 
 #### update the data
@@ -65,10 +79,14 @@ pm2 --version
 > sudo apt-get update
 
 >> - **install MongoDB**  :
- ```cd sudo apt-get install -y mongodb-org ```
+ ```cd 
+ sudo apt-get install -y mongodb-org
+  ```
 
 >> - **if require instal mongoDb by runing code** :
- ```cd npm i mongodb ```
+ ```cd 
+ npm i mongodb
+  ```
 
 
 # Start MongoDB
@@ -93,7 +111,9 @@ git clone `url`  # - ** clone the repository**
 
 ## we can clone the repo or we can directly copy the file to the server using ftp or sftp or rsync or any other method for example we can use `scp` commend to copy
 
-```cp scp -P PORT{defealt port is 22} /path/to/local/folder username@your_vps_ip:/path/to/remote/folder  ```
+```cp 
+scp -P PORT{defealt port is 22} /path/to/local/folder username@your_vps_ip:/path/to/remote/folder
+  ```
 
 - Replace username with your VPS `username` (typically/defealt user is =  root) and `your_vps_ip` with the actual IP address of your server.
 
@@ -115,24 +135,38 @@ pm2 ls  # To list out the server
 pm2 start npm --name "Give_server_name" -- start   ```  #:- **this will create server for your backend. run  this cmd in Bankend folder**
 ```
 
-```cd  pm2 logs Give_server_name  ``` :- **this will check whether your server is running well or not is not than  **
+- **this will check whether your server is running well or not is not than  **
+```cd  
+pm2 logs Give_server_name 
+ ``` 
 
-```cd pm2 restart Give_server_name  ```- **this will restart the server**
+- **this will restart the server**
+```cd 
+pm2 restart Give_server_name 
+ ```
 
 
 6. **Install Nginx**
 
 - **install Nginx** :- 
-```cd   sudo apt-get install nginx  ```
+```cd   
+sudo apt-get install nginx
+  ```
 
 - **start Nginx** :-
-```cd   sudo systemctl start nginx   ```
+```cd   
+sudo systemctl start nginx 
+  ```
 
 - **enable Nginx** :-
-```cd  sudo systemctl enable nginx ```
+```cd  
+sudo systemctl enable nginx
+ ```
 
 - **check Nginx status** :-
-  ```cd sudo systemctl status nginx  ```
+  ```cd 
+  sudo systemctl status nginx 
+   ```
 
 
 7. **Install pnmp**

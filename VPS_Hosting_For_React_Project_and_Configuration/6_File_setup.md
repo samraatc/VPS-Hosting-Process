@@ -11,7 +11,8 @@
 
 > - run_command
 
-```cd pnpm install / npm install
+```cd 
+pnpm install / npm install
 ```
 
 > - setup .env 
