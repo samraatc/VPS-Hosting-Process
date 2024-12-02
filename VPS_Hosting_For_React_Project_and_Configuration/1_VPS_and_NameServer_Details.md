@@ -1,5 +1,5 @@
 # Details on VPS
--A VPS (Virtual Private Server) is a type of web hosting service that provides you with a virtualized server, which mimics a dedicated server within a shared hosting environment. Essentially, it’s a middle-ground solution between shared hosting and a dedicated server, offering more control, performance, and customization than shared hosting. 
+- A VPS (Virtual Private Server) is a type of web hosting service that provides you with a virtualized server, which mimics a dedicated server within a shared hosting environment. Essentially, it’s a middle-ground solution between shared hosting and a dedicated server, offering more control, performance, and customization than shared hosting. 
 
 ## Key Characteristics of a VPS:
 1. Isolation: Each VPS operates independently, meaning one VPS cannot directly affect the -performance or security of another VPS on the same physical server.
@@ -50,3 +50,16 @@
 2. Recursive Name Servers: These are used by internet service providers (ISPs) or third-party DNS providers. When a user requests a domain, the recursive name server looks up the domain name, querying other servers as needed to find the final answer.
 
 
+
+
+
+> This is a blockquote.
+> 
+>> This is a blockquote.
+> 
+> You can add multiple lines.
+> This is a blockquote.
+> 
+> You can add multiple lines.
+
+> You can add multiple lines.

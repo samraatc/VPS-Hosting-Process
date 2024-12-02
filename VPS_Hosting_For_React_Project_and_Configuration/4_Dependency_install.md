@@ -22,6 +22,7 @@
 
 ## instulatation and updatation 
 - run the following command
+
 ```sh
 sudo apt update
 sudo apt upgrade
@@ -35,7 +36,7 @@ node -v
 npm -v
 git --version
 pm2 --version
-- Install Software (If required) once you have installed the software package from next setup no need to install it again
+ # Install Software (If required) once you have installed the software package from next setup no need to install it again
 ```
 
 
