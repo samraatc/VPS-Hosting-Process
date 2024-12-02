@@ -55,7 +55,7 @@
 
 > This is a blockquote.
 > 
->> This is a blockquote.
+> This is a blockquote.
 > 
 > You can add multiple lines.
 > This is a blockquote.
