@@ -43,7 +43,7 @@ server {
 
 
 ```bash
-ln -s ../sites-available/Your_IP_address.conf .
+ln -s ../sites-available/Your_IP_address.conf .  
 
 ```
 

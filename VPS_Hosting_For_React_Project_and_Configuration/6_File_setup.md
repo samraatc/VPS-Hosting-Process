@@ -15,13 +15,15 @@
 ```
 
 > - setup .env 
+> 
+> - (nano is used for creating empty text files and cat is ueded to read the text file)
 
-```cd nano .env  ```    - (nano is used for creating empty text files and cat is ueded to read the text file)
+```cd nano .env  ```   
 > - set environment variable inside nano .env 
 > - save and exit nano .env 
-> ctrl + O             - to save the configuration 
-> enter 
-> ctrl + X             - to exit nano .env
+> - ctrl + O             - to save the configuration 
+> - enter 
+> - ctrl + X             - to exit nano .env
 
 
 
@@ -47,15 +49,17 @@ pnpm install / npm install
 ```
 > - setup .env
 
-```bash nano .env ```
+```bash 
+nano .env 
+```
 
 > - set environment variable inside nano .env
 > - save and exit nano .env 
-> ctrl + O             - to save the configuration 
->enter 
->ctrl + X             - to exit nano .env
-
-
+> -  ctrl + O             - to save the configuration 
+> - enter 
+> - ctrl + X             - to exit nano .env
+>
+>
 >- if you have created constraints.js file or othe js files for connectivity for the server than setup for it same as nano .env
 
 
@@ -65,7 +69,9 @@ pnpm install / npm install
 - start the Frontend server
 
 
-```bash pnpm build / npm run build ```
+```bash 
+pnpm build / npm run build
+ ```
 
 #### **build and preview**
 - first check the ufw status if 4173 is allowed or not. make sure 4173 / 3000 is allowed this port allow to run the build and preview webpage
@@ -80,7 +86,8 @@ pnpm preview --host  or    npm run preview --host
 - after preview is done deny the port 4173 / 3000 to prevent any unwanted access to the server
 - now you can visit the webpage by visiting the ip address of the server with port 4173 / 3000
 
-```bash sudo ufw deny 4173 / 3000
+```bash
+ sudo ufw deny 4173 / 3000
 ```
 - up to here it's done now go for the server configuration
 
