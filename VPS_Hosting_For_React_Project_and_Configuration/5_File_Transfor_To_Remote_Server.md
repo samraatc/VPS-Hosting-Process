@@ -7,22 +7,25 @@
 
 ## Git clone
 
-- git clone is a command that allows you to download a copy of a repository from your git to your a remote server
+> - git clone is a command that allows you to download a copy of a repository from your git to your a remote server
 
-- i have given cammand in `4_Dependency_install.md` 
-- again here
+> - i have given cammand in `4_Dependency_install.md` 
+> - again here
 
-```bash
-- flow the step of cloning a repository
-- **install git** - if installed then directly go with `git clone {repo url}` cmd
+
+> - flow the step of cloning a repository
+> - **install git** - if installed then directly go with `git clone {repo url}` cmd
+
+```cd
 
 sudo apt install git
 sudo apt update
 sudo apt install gh
-gh auth login     - **flow the ungoing process for login authorization with github** 
-git clone `url`   - ** clone the repository**
-
 ```
+
+```cd gh auth login ```     - **flow the ungoing process for login authorization with github** 
+```cd git clone `url`  ``` - ** clone the repository**
+
 
 
 ## scp checkout
@@ -34,9 +37,11 @@ git clone `url`   - ** clone the repository**
 
 scp -P PORT{defealt port is 22} /path/to/local/folder username@your_vps_ip:/path/to/remote/folder
 
+```
+
 - Replace username with your VPS `username` (typically/defealt user is =  root) and `your_vps_ip` with the actual IP address of your server/vps ip.
 
 
-```
+
 
 
