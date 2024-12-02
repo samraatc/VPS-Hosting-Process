@@ -76,14 +76,15 @@ node --version
 
 #### update the data
 
-> sudo apt-get update
-
->> - **install MongoDB**  :
+```s
+sudo apt-get update
+```
+>- **install MongoDB**  :
  ```cd 
  sudo apt-get install -y mongodb-org
   ```
 
->> - **if require instal mongoDb by runing code** :
+> - **if require instal mongoDb by runing code** :
  ```cd 
  npm i mongodb
   ```
@@ -130,10 +131,11 @@ npm i -g pm2   # to install the pm2 server manager
 pm2 ls  # To list out the server
 
 ```
+- **this will create server for your backend. run  this cmd in Bankend folder**
 
 ```cd 
-pm2 start npm --name "Give_server_name" -- start   ```  #:- **this will create server for your backend. run  this cmd in Bankend folder**
-```
+pm2 start npm --name "Give_server_name" -- start
+   ``` 
 
 - **this will check whether your server is running well or not is not than  **
 ```cd  
