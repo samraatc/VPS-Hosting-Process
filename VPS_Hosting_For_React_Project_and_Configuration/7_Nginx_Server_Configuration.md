@@ -30,7 +30,7 @@ server {
 }
 ```
 
-```save
+
 > - save and exit nano
 
 > ctrl + O             # to save the configuration 
@@ -40,6 +40,7 @@ server {
 > 
 > - open the file in the `/etc/nginx/sites-enable/` folder
 > - enable the symbolic linke for `/etc/nginx/sites-available/`  use the below code
+
 
 ```bash
 ln -s ../sites-available/Your_IP_address.conf .
