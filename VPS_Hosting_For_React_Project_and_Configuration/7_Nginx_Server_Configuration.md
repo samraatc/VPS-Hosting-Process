@@ -14,7 +14,9 @@
 `nano Your_IP_address.conf`
 
 - add the following code to the file
+-  visit the frontend build folder and and type `pwd` to know the present directory and copy the full path
 ```bash
+
 
 
 server {
@@ -26,12 +28,15 @@ server {
         try_files $uri $uri // index.html;
     }
 }
+```
 
+```save
+- save and exit nano
 
-- save and exit nano 
-ctrl + O             - to save the configuration 
+ctrl + O             # to save the configuration 
 enter 
-ctrl + X             - to exit nano .env 
+ctrl + X             # to exit nano .env
+
 
 - open the file in the `/etc/nginx/sites-enable/` folder
 - enable the symbolic linke for `/etc/nginx/sites-available/`  use the below code
@@ -51,7 +56,9 @@ sudo systemctl restart nginx  - to restart the server
 `nano Your_Domain_Full_name.conf`
 
 - add the following code to the file
+- visit the frontend build folder and and type `pwd` to know the present directory and copy the full path
 ```bash
+
 
 server {
     listen 80;
@@ -63,8 +70,11 @@ server {
     }
 }
 
-- flow the above steps to save and enable the symbolic link and restart the server
+
 ```
+- flow the above steps to save and enable the symbolic link and restart the server
+
+  
 
 
 ### For **Backend configuration**
@@ -74,12 +84,13 @@ server {
 - add the following code to the file
 ```bash
 
+
 server {
         listen 80;
 	server_name Your_Backend_api_Full_name www.Your_Backend_api_Full_name;
 
         location / {
-                proxy_pass http://localhost:5003;          - # ( replace the 5003 port to your backend port )
+                proxy_pass http://localhost:5003;           # ( replace the 5003 port to your backend port )
                 proxy_http_version 1.1;
                 proxy_set_header Upgrade $http_upgrade;
                 proxy_set_header Connection 'upgrade';
@@ -88,11 +99,9 @@ server {
         }
 }
 
-
-
-
-- flow the above steps to save and enable the symbolic link and restart the server
 ```
+- flow the above steps to save and enable the symbolic link and restart the server
+
 
 
 - **Note**: Make sure to replace `Your_Domain_Full_name` and `Your_Backend` 
@@ -100,3 +109,34 @@ server {
    1. rmove the localhost URL with `https://Your_Backend_api_Full_name` 
    2. save the file and rebuild the frontend file
    3. restart the server
+
+- **Note** :- some time even after correct configuration project does not reflect on domain so we need to add ssl certificate. after adding this the project satart to render on the domain
+
+   
+# SSL Setup
+- We are going to use Let’s Encrypt SSL certificate using certbot. To install certbot:
+
+### install python 
+```py
+sudo apt-get install certbot python3-certbot-nginx
+
+####  To install certificate to your domain you can use this command:
+
+sudo certbot --nginx -d mywebsite.com -d www.mywebsite.com (add this if you have created subdomain www :- `-d www.mywebsite.com`)
+
+- you can also use "sudo certbot --nginx -d mywebsite.com" but since we have "www"
+- too we are passing another argument with another website.
+- When you do it for first time, it will ask for email, enter any email.
+- Then it will tell to agree to conditions or whatever, choose "Y"
+- At last, it will tell if you want to share your email, choose "n"
+
+-  Now, let's do for our api one
+
+sudo certbot --nginx -d api.mywebsite.com -d www.api.mywebsite.com
+
+
+- add the subdomain or domain to which you want to add ssl certificate
+- SSL is successfully installed on your website
+### **Note** :- After installing ssl on your api, you would need to change api url from client/frontend because we had used “http” at that time. So, go to your client/frontend, update your API URL with https and build the project.
+
+```
